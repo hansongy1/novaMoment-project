@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<html>
+	<head>
+		<title>NovaMoment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<!-- 화면전환 추가(slideToggle) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){  // 웹문서 로딩 완료 기다렸다가
+			$("#site").click(function(){  // id="site" 요소 클릭하거든
+				$("#url").slideToggle("slow"); // id="url" 요소를 천천히 미끄러지듯이 위로 올려라.
+				  
+			});
+		});
+		</script>
+
+		<!-- 2022-11-23 장바구니 구현 -->
+		<script type="text/javascript">
+			function fnCart(name, price) {
+				//alert("Name : " + name + "\nPrice : " + price);
+				if(confirm("장바구니에 담으시겠습니까?")) {
+					location.href = "CartProcess.jsp?name=" + name + "&price=" + price;
+				}
+			}
+			
+			function fnView() {
+				if(confirm("장바구니를 보시겠습니까?")){
+					location.href = "CartView.jsp";
+				}
+			}	
+		</script>
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Nova</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="index.html">About Us</a></li>
+                            <li><a href="login.html">Log In</a></li>
+                            <li><a href="agreement.html">Join Us</a></li>
+							<li><a href="mypage.html">My Page</a></li>
+                            <!-- <li><a href="mybasket.html">My Basket</a></li> -->
+
+                            <li class="active"><a href="digital.html">Digital</a></li>
+
+
+                            <li><a href="living.html">Living</a></li>
+                            <li><a href="accessory.html">Accessory</a></li>
+							<li><a href="smart_tok.html"><sup>new!</sup>SmartTok</a></li>
+						</ul>
+						<!-- UI_개선_돋보기_2차 -->
+						<div id="right">
+							<div id="r_search"><a href="#none"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+						</div>
+					</nav>	
+					</nav>
+
+                <!-- Main -->
+					
+					<div id="main">
+						<!-- 최종_2차_애니메이션 수정 -->
+							<!-- <div class="row">
+								<div class="col-6 col-12-small">
+										<h3 id="site">Unordered</h3>
+										<ul>
+											<li id="url">Dolor pulvinar etiam.</li>
+											<li id="url">Sagittis lorem eleifend.</li>
+											
+										</ul>
+								</div>
+							</div> -->
+
+						<!-- <ul class="actions">
+								<li><input type="submit" value="Send Message" class="primary" /></li>
+						<div id="site"><h3>digital</h3></div>
+						<div id="url"><a href="phonecase.html">phone case</a><br>
+							<a href="smart_tok.html">smart tok</a>
+						</div>
+						 -->
+
+						<!-- class datail이라고 정함 -->
+						<header class="detail">
+							<div><h2 id="site"><a href="#">digital</a></h2>
+								<div id="url"><a href="digital.html">- phone case</a><br>
+									<a href="smart_tok.html">- smart tok</a>
+								</div>
+							</div>
+						</header>
+						<!-- 끗 -->
+
+						<!-- 상품명 -->
+						<article class="post featured">
+							<header class="major">
+								<h3>phone case</h3>
+							</header>
+						</article>
+
+						<!-- Posts -->
+							<section class="posts">
+								<article>
+									<a class="image fit"><img src="images/pic11.jpg" alt="" /></a>
+									<header>
+										<!-- <span class="date">April 24, 2017</span> -->
+										<h3><a href="">Cloud Rabbit case</a></h3>
+									</header>
+									<a href="check.html" class="button">자세히 보기</a>
+									<a href="#" class="button icon solid fa-shopping-basket">장바구니</a>
+								</article>
+
+								<article>
+									<a class="image fit"><img src="images/pic12.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Oil Paint case</a></h3>
+									</header>
+									<a href="check.html" class="button">자세히 보기</a>
+									<a href="#" class="button icon solid fa-shopping-basket">장바구니</a>
+								</article>
+
+								<article>
+									<a class="image fit"><img src="images/pic13.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Magic Cloud Carpet case</a></h3>
+									</header>
+									<a href="check.html" class="button">자세히 보기</a>
+									<a href="#" class="button icon solid fa-shopping-basket">장바구니</a>
+								</article>
+
+								<article>
+									<a class="image fit"><img src="images/pic14.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Shade Clouds case</a></h3>
+									</header>
+									<a href="check.html" class="button">자세히 보기</a>
+									<a href="#" class="button icon solid fa-shopping-basket">장바구니</a>
+								</article>								
+							</section>
+							
+							<!-- 3칸 연달아 상품 -->
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-4"><span class="image fit"><img src="images/pic11.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic12.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic13.jpg" alt="" /></span></div>
+									<!-- Break -->
+									<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+								</div>
+							</div> 
+
+						<!-- 상품명 2 -->
+						<article class="post featured">
+							<header class="major">
+								<h3>SmartTok</h3>
+							</header>
+						</article>
+							<section class="posts">
+								<article>
+									<a href="#" class="image fit"><img src="images/pic41.jpg" alt="" /></a>
+									<header>
+										<!-- <span class="date">April 24, 2017</span> -->
+										<h3><a href="#">Cloud Rabbit Tok</a></h3>
+									</header>
+								</article>
+
+								<article>
+									<a href="#" class="image fit"><img src="images/pic42.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Oil Paint Tok</a></h3>
+									</header>
+								</article>
+
+								<article>
+									<a href="#" class="image fit"><img src="images/pic43.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Magic Cloud Carpet Tok</a></h3>
+									</header>
+								</article>
+
+								<article>
+									<a href="#" class="image fit"><img src="images/pic44.jpg" alt="" /></a>
+									<header>
+										<h3><a href="#">Shade Clouds Tok</a></h3>
+									</header>
+								</article>
+							</section>
+							
+
+						<!-- Footer -->
+							<footer>
+								<div class="pagination">
+									<a href="#" class="previous">Prev</a>
+									<a href="#" class="page active">1</a>
+									<a href="#" class="page">2</a>
+									<a href="#" class="page">3</a>
+									<span class="extra">&hellip;</span>
+									<a href="#" class="page">8</a>
+									<a href="#" class="page">9</a>
+									<a href="#" class="page">10</a>
+									<a href="#" class="next">Next</a>
+								</div>
+							</footer>
+
+							<h3 id="clock" style="color:black;">clock</h3>
+							<script>
+								var Target = document.getElementById("clock");
+								function clock() {
+									var time = new Date();
+						
+									var month = time.getMonth();
+									var date = time.getDate();
+										var day = time.getDay();
+									var week = ['일', '월', '화', '수', '목', '금', '토'];
+						
+									var hours = time.getHours();
+									var minutes = time.getMinutes();
+									var seconds = time.getSeconds();
+						
+									Target.innerText = 
+									`${month + 1}월 ${date}일 ${week[day]}요일 ` +
+									`${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+										
+								}
+								clock();
+								setInterval(clock, 1000); // 1초마다 실행
+							</script>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 2201803 한송이</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
