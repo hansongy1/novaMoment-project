@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<html>
+	<head>
+		<title>NovaMoment</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			// 이벤트를 연결합니다.
+			window.onload = function () {
+				// 문서 객체를 선택합니다.
+				var input_1 = document.querySelectorAll('input')[0];
+				var input_2 = document.querySelectorAll('input')[1];
+				// input_1
+				input_1.onkeydown = function () {
+					// 글자 개수가 여섯 개 이상일 경우
+					if (6 <= input_1.value.length) {
+						// input_2 문서 객체로 초점을 이동합니다.
+						input_2.focus();
+					}
+				};
+				// input_2
+				input_2.onkeydown = function (event) {
+					// 이벤트 객체를 추출합니다.
+					var event = event || window.event;
+					// 사용자의 입력이 '백 스페이스'이고 입력된 글자가 없는 경우
+					if (event.keyCode == 8 && input_2.value.length == 0) {
+						input_1.focus();
+					}
+				};
+			};
+		</script>
+	</head>
+
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Nova</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li><a href="index.html">About Us</a></li>
+                            <li><a href="login.html">Log In</a></li>
+							<li class="active"><a href="agreement.html">Join Us</a></li>
+							<li><a href="mypage.html">My Page</a></li>
+                            <!-- <li><a href="mybasket.html">My Basket</a></li> -->
+                            <li><a href="digital.html">Digital</a></li>
+                            <li><a href="living.html">Living</a></li>
+                            <li><a href="accessory.html">Accessory</a></li>
+							<li><a href="smart_tok.html"><sup>new!</sup>SmartTok</a></li>
+						</ul>
+
+						<!-- UI_개선_돋보기_2차 -->
+						<!-- <div id="right">
+							<div id="r_search"><a href="#none"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+						</div> -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+
+                                    <!-- <h2>주문확인</h2> -->
+
+									<h3>주문 상품</h3>
+									<div class="table-wrapper">
+										<table>
+                                            <tbody>
+												<tr>
+													<td>DIGITAL</td>
+													<td>CLOUD RABBIT CASE</td>
+													<td>18000</td>
+												</tr>
+												<tr>
+													<td>DIGITAL</td>
+													<td>OIL PAINT CASE</td>
+													<td>18000</td>
+												</tr>
+												<tr>
+													<td>LIVING</td>
+													<td>SHADE CLOUDS 패브릭포스터</td>
+													<td>23000</td>
+												</tr>
+											</tbody>
+										</table>
+                                        <br><br>
+                                    <form method="post" action="#">
+                                        <div class="fields">
+                                            
+                                            <div class="field">
+                                                <label for="store_name">주문자 이름</label>
+                                                <input type="text" name="store_name" id="store_name" />
+                                            </div>
+                                            <div class="field">
+                                                <label for="password">주문자 주소</label>
+                                                <input type="text" name="password" id="password" />
+                                            </div>
+                                        </div>
+										<br/>
+										<ul class="actions fit">
+											<li><a href="#" class="button primary fit">주문하기</a></li>
+										</ul>
+                                    </form>
+                                </header>
+                            </article>
+
+							<!-- 현재 시간 -->
+                            <h3 id="clock" style="color:black;">clock</h3>
+							<script>
+								var Target = document.getElementById("clock");
+								function clock() {
+									var time = new Date();
+						
+									var month = time.getMonth();
+									var date = time.getDate();
+										var day = time.getDay();
+									var week = ['일', '월', '화', '수', '목', '금', '토'];
+						
+									var hours = time.getHours();
+									var minutes = time.getMinutes();
+									var seconds = time.getSeconds();
+						
+									Target.innerText = 
+									`${month + 1}월 ${date}일 ${week[day]}요일 ` +
+									`${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+										
+								}
+								clock();
+								setInterval(clock, 1000); // 1초마다 실행
+							</script>
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 2201803 한송이</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
